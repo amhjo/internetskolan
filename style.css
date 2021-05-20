@@ -44,7 +44,7 @@ header {
 }
 
 #column-nav {
-  margin: 3% 0% 0% 2%;
+  margin: 3% 0% 0% 1%;
   flex: 60%;
 }
 
@@ -71,7 +71,7 @@ header {
   display: inline;
   font-family: Overpass;
   font-size: 1.05em;
-  padding: 3%;
+  padding-left: 5%;
   font-weight: 700;
 }
 
@@ -83,6 +83,10 @@ header {
 
 #navbar-links a:active {
   color: var(--accent-color);
+}
+
+#navbar-accessability {
+  padding-left: 10%;
 }
 
 #navbar-accessability i {
@@ -154,6 +158,7 @@ header {
 .grid-item:hover {
   transform: scale(1.02);
   transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 10px #312b4557);
 }
 
 .grid-container a { 
