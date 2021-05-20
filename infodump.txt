@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 Hejhej nu gör jag en ändring
 / A-M
+=======
+Här kan man testa att skriva.
+Hello!!! /dessi
+Hallå /dessi
+>>>>>>> 4075f9782f81d58c19be37f7eb372ec833d10eb6
