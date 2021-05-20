@@ -10,7 +10,7 @@
   --accent-color: #F44559;
 
   /* BG-VIT */
-  --main-bg-color: #fcfcfc;
+  --main-bg-color: #f4f4f4;
 
   /* TEXTFÄRG: Nästan svart version av PostNord-blå */
   --main-text-color: #312B45;
@@ -33,155 +33,271 @@ body {
 }
 
 header {
-    margin: 0% 12% 0% 12%;
+    margin: 0% 11% 0% 11%;
 }
 
 #column-logo {
-  flex: 10%;
+  margin: auto;
+  flex: 15%;
   text-align: center;
+  /*position: relative;*/
 }
 
 #column-nav {
+  margin: 3% 0% 0% 2%;
   flex: 60%;
 }
 
 #column-logo > h1 {
-  padding: 8%;
+  padding: 15% 8% 8% 8%;
   border-radius: 0px 0px 30px 30px;
   font-family: 'Roboto Slab';
   color: white;
   font-size: 2em;
   background-color: var(--main-color);
-  transition: 0.5s ease;
+  transform: translateY(-20%);
+  transition: 0.3s ease;
   cursor: pointer;
 }
 
 #column-logo > h1:hover {
-  padding: 10% 8% 8% 8%;
+  /*padding: 10% 8% 8% 8%;*/
+  transform: translateY(-15%);
 }
 
-#column-nav ul {
-  padding: 4%;
-  font-family: Overpass;
-}
+/* NAVIGATION BAR */
 
-#column-nav li {
-  color: #0E4767;
-  font-weight: 700;
-  padding-left: 11%;
+#navbar-links, #navbar-accessability, #navbar-links li, #navbar-accessability li {
   display: inline;
-  font-size: 1.1em;
-  transition: 0.5s ease;
+  font-family: Overpass;
+  font-size: 1.05em;
+  padding: 3%;
+  font-weight: 700;
 }
 
-#column-nav li:hover {
-  text-decoration: underline;
+#navbar-links a {
+  color: #0E4767;
+  text-decoration: none;
+  transition: 0.1s ease;
 }
 
+#navbar-links a:active {
+  color: var(--accent-color);
+}
+
+#navbar-accessability i {
+  padding-right: 1%;
+}
+
+#navbar-accessability li {
+  color: rgb(95, 95, 95);
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+#column-nav a:hover {
+  border-bottom: 3px var(--accent-color) solid;
+}
+
+#accessability-1:hover, #accessability-2:hover {
+  color: var(--accent-color);
+}
+
+
+/* INNER CONTAINER */
 
 #homepage-content {
-  margin: 8% 15% 13% 15%;
+  margin: 6% 15% 7% 15%;
+
 }
 
 #homepage-content h1 {
   font-family: Roboto Slab;
-  padding-bottom: 2%;
-  font-size: 2.5em;
+  margin: -2% 0 -2% 0;
+  padding: 2%;
+  font-size: 2.3em;
   color: var(--main-text-color);
 }
 
 #homepage-content h2 {
   font-family: Overpass;
   padding-bottom: 5%;
+  line-height: 1.6em;
+  padding: 1.5% 0% 8% 2%;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: var(--main-text-color);
 }
 
 
 /* LEKTIONSGRID START */
 .grid-container {
-  margin: 0% 6% 0% 6%;
   display: grid;
+  justify-content: center;
   grid-template-columns: auto auto auto;
-  grid-gap: 4em;
+  grid-template-rows: auto;
+  position: relative;
+  margin: 2% 0% 3% 0%;
+  
 }
 
 .grid-item {
   display: grid;
-  grid-template-columns: auto;
   grid-auto-rows: 50%;
   height: 25em;
   width: 18em;
+  padding: 1em 2.3em 3em 2.3em;
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 8px #312b4538);
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+.grid-container a { 
+  text-decoration: none;
+}
+
+.lektionsbild {
+  z-index: 100;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 83%;
+  transform: translateY(-22%);
+}
+/* Individuell transform för varje lektionsbild */
+#fyra, #fem {
+  transform: translateY(15%);
+}
+
+#tva {
+  transform: translateY(-14%);
+}
+
+#tre {
+  transform: translateY(-15%);
+}
+
+#sex {
+  transform: translateY(280%);
 }
 
 .lektion-top {
-  background-color: white /*var(--main-bg-color)*/;
+  background-color: white;
   border-radius: 30px 30px 0px 0px;
-  border: solid lightgrey 3px;
-  border-bottom: 0px;
+  /* border: solid lightgrey 3px;
+  border-bottom: 0px; */
 }
 
 .lektion-bottom {
   background-color: #E8E8E8;
   border-bottom: solid var(--accent-color) 7px;
+  z-index: -5;
 }
 
 .lektion-bottom h3, h4, p {
-  padding: 3% 7% 0% 7%;
+  padding: 5% 7% 0% 7%;
   color: var(--main-text-color);
 }
 
 .lektion-bottom h3 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-family: Roboto Slab;
 }
 
 .lektion-bottom h4 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-family: Overpass;
+  color: #383838;
+  margin-top: -5%;
   font-weight: 700;
 }
 
 .lektion-bottom p {
-  font-size: 1.1em;
+  font-size: 1em;
   font-family: Overpass;
   font-weight: 400;
+  margin-top: 2%; 
 }
 
+/* ----- INFO ROW -- */
+
+#column-information-row {
+  display: flex;
+  color: var(--main-text-color);
+  padding: 3.5% 2% 2% 2%;
+}
+
+#column-help {
+  flex: 10%;
+}
+
+#column-help  p {
+  font-family: 'Overpass';
+  padding: 0% 10% 0% 0%;
+  margin: -2% 0 0 0;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+#column-help  h3 {
+  font-family: 'Roboto Slab';
+}
+
+#column-info {
+  flex: 10%;
+  
+  /*background-color: pink;*/
+}
+
+#column-info p {
+  font-family: 'Overpass';
+  color: var(--main-text-color);
+  padding: 0 10% 0 0;
+  margin: -2% 0 0 0;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+#column-info  h3 {
+  font-family: 'Roboto Slab';
+}
 
 
 /* --- FOOTER --- */
 footer {
   background-color: var(--main-color);
+  min-height: 5em;
 }
 
 #footer-navbar-row {
   display: flex;
-  margin: 0% 12% 0% 12%;
+  padding-top: 1%;
+  margin: 0 12% 0 12%;
 }
 
 
 #footer-nav ul {
   padding: 4%;
   font-family: Overpass;
-
+  font-weight: 700;
 }
 
 
 #footer-nav li {
   padding: 5%;
-  color: white;
-  text-decoration: underline;
   display: inline;
   font-size: 1.1em;
 }
 
 
 #sthlm-logo{
-  width: 60%;
-  height: 60%;
-  padding: 5%
+  width: 10em;
+  height: auto;  
+  padding: 1em;
 }
 
 
@@ -192,4 +308,21 @@ footer {
 #footer-nav {
   flex: 60%;
   text-align: left;
+}
+
+footer a {
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  border-bottom: 2px white solid;
+  padding-bottom: 0.15em;
+  text-decoration: none;
+}
+
+footer a:hover {
+  border-bottom: 3px var(--accent-color) solid;
+}
+
+#red {
+  color: red;
 }

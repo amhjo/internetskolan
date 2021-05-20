@@ -2,6 +2,7 @@
 <html lang="swe" dir="ltr">
   <head>
     <link rel="stylesheet" href="style.css"><meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Internetskolan</title>
   </head>
 
@@ -10,18 +11,20 @@
 <!-- LOGO + NAVBAR CONTENT-->
   <header>
     <div id="logo-navbar-row">
-
+  
       <div id="column-logo">
           <h1>Internetskolan</h1>
       </div>
 
       <nav id="column-nav">
-        <ul>
-          <li>Alla lektioner</li>
-          <li>Länkar</li>
-          <li>Lexikon</li>
-          <li>Lyssna</li>
-          <li>Språk</li>
+        <ul id="navbar-links">
+          <li><a href="/index.html">Alla lektioner</a></li>
+          <li><a href="/index.html">Länkar</a></li>
+          <li><a href="/index.html">Lexikon</a></li>
+        </ul>
+        <ul id="navbar-accessability">
+          <li id="accessability-1"><i class="fas fa-volume-up"></i> Lyssna</li>
+          <li id="accessability-2"><i class="fas fa-globe"></i> Språk</li>
         </ul>
       </nav>
 
@@ -30,37 +33,56 @@
 
 <!-- MAIN PAGE CONTENT -->
 <main id="homepage-content">
-  <h1>Välkommen till Internetskolan!</h1>
-  <h2>Internetskolan hjälper dig i din digitala vardag.</h2>
 
+  <h1>Välkommen till Internetskolan!</h1>
+  <h2>På Internetskolan kan du lära dig allt du behöver för att börja använda internet! <br>
+    Välj bland lektionerna nedan, utforska länkbanken eller varför inte ta en rundtur i vårt lexikon?</h2>
+
+<!-- START LEKTIONSGRID -->
     <div class="grid-container">
+      <a href="/lektion-1.html">
          <div class="grid-item">
-           <div class="lektion-top">OVANSIDA</div>
+           <div class="lektion-top">
+            <img class="lektionsbild" id="ett" src="lektion_1.png" alt="lektion_1.png">
+           </div>
            <div class="lektion-bottom">
              <h3>Lektion 1</h3>
              <h4>Hur fungerar internet?</h4>
              <p>En introduktion till grunderna om internet.</p>
            </div>
          </div>
+        </a>
+
+        <a href="/index.html">
          <div class="grid-item">
-           <div class="lektion-top">OVANSIDA</div>
+           <div class="lektion-top">
+            <img class="lektionsbild" id="tva" src="lektion_2.png" alt="lektion_2.png">
+           </div>
            <div class="lektion-bottom">
              <h3>Lektion 2</h3>
              <h4>Faror på internet</h4>
-             <p>Vad du bör akta dig för på internet.</p>
+             <p>Lär dig om vad du bör akta dig för på internet.</p>
            </div>
          </div>
+        </a>
+
+        <a href="/index.html">
          <div class="grid-item">
-           <div class="lektion-top">OVANSIDA</div>
+           <div class="lektion-top">
+            <img class="lektionsbild" id="tre" src="lektion_3.png" alt="lektion_3.png">
+           </div>
            <div class="lektion-bottom">
              <h3>Lektion 3</h3>
              <h4>Internets möjligheter</h4>
-             <p>Vad du kan göra med internet.</p>
+             <p>Vad kan du göra på internet? Här introduceras olika tjänster och hur du använder dem.</p>
           </div>
          </div>
+        </a>
+
+        <a href="/index.html">
          <div class="grid-item">
            <div class="lektion-top">
-             <img src="dukenukem.jpg" alt="logo_stockholmsstad">
+            <img class="lektionsbild" id="fyra" src="lektion_4.png" alt="lektion_4.png">
            </div>
            <div class="lektion-bottom">
              <h3>Alla lektioner</h3>
@@ -68,44 +90,71 @@
              <p>Se Internetskolans fullständiga samling av lektioner om internet.</p>
            </div>
          </div>
+        </a>
+
+        <a href="/index.html">
          <div class="grid-item">
-           <div class="lektion-top">OVANSIDA</div>
+           <div class="lektion-top">
+             <img class="lektionsbild" id="fem" src="lektion_5.png" alt="lektion_5.png">
+            </div>
            <div class="lektion-bottom">
              <h3>Länkar</h3>
-             <h4>Länkbank med olika tips för din internetresa</h4>
+             <h4>Länkbank med olika tips</h4>
              <p>Allt från chattverktyg till de klurigaste mobilspelen.</p>
            </div>
          </div>
+        </a>
+
+
+        <a href="/index.html">
          <div class="grid-item">
-           <div class="lektion-top">OVANSIDA</div>
+           <div class="lektion-top">
+            <img class="lektionsbild" id="sex" src="tuben.png" alt="tuben.png">
+           </div>
            <div class="lektion-bottom">
              <h3>Lexikon</h3>
-             <h4>En samling av vanliga ord du kan möta på webben!</h4>
-             <p>Vad betyder egentligen LOL?</p>
+             <h4>En samling av vanliga ord</h4>
+             <p>Vad betyder egentligen LOL? Eller vad är en hackare för något?</p>
            </div>
          </div>
+        </a>
+    </div>
+<!-- SLUT LEKTIONSGRID -->
+
+<!-- kolumn för text under grids-->
+    <div id="column-information-row">
+    
+    <div id="column-help">
+    <h3>Behöver du hjälp?</h3><br>
+    <p>Självklart hjälper vi dig.<br> 
+      Vi finns tillgängliga på vardagar mellan 8-18. <br>
+      Internetskolan@xxx.com <br>
+      +467072049xx</p>
     </div>
 
-    <h3>Behöver du hjälp?</h3>
+    <div id="column-info">
+    <h3>Utforska internet med oss!</h3><br>
+    <p>Under internettips hittar du bra tips och länkar. Bland annat hur du hanterar en smartphone, hur du betalar räkningar och andra allmänna tips. 
+    </p>
+  </div>
+</div>
 
-    <h3>Utforska internet med oss!</h3>
 </main>
 
+<!-- FOOTER -->
      <footer>
        <div id=footer-navbar-row>
        <nav id="footer-nav">
          <ul>
-           <li>Om oss</li>
-           <li>Kontakt</li>
-           <li>Vanliga frågor</li>
-           <li>Lär dig mer</li>
+           <li><a href="/index.html">Om oss</a></li>
+           <li><a href="/index.html">Kontakt</a></li>
+           <li><a href="/index.html">Vanliga frågor</a></li>
+           <li><a href="/index.html">Lär dig mer</a></li>
          </ul>
-         </nav>
+        </nav>
 
-         <div id="column-sthlm-logo"
-         <a href="sthlm-logo_stockholmsstad.png">
+         <div>
            <img id="sthlm-logo" src="logo_stockholmsstad.png" alt="logo_stockholmsstad"></li>
-         </a>
        </div>
 
      </div>
