@@ -1,0 +1,195 @@
+/* Importerar typsnitt från Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Roboto+Slab:wght@700&display=swap');
+
+/* --- Sätter variabler för färger --- */
+:root {
+  /* HUVUDFÄRG: PostNord-blå */
+  --main-color: #218CC8;
+
+  /* ACCENTFÄRG: Magenta/rosa/orange */
+  --accent-color: #F44559;
+
+  /* BG-VIT */
+  --main-bg-color: #fcfcfc;
+
+  /* TEXTFÄRG: Nästan svart version av PostNord-blå */
+  --main-text-color: #312B45;
+}
+
+
+
+/* --- STYLING BÖRJAR HÄR --- */
+* {
+  margin: 0;
+  height: auto;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+#logo-navbar-row {
+  display: flex;
+}
+
+header {
+    margin: 0% 12% 0% 12%;
+}
+
+#column-logo {
+  flex: 10%;
+  text-align: center;
+}
+
+#column-nav {
+  flex: 60%;
+}
+
+#column-logo > h1 {
+  padding: 8%;
+  border-radius: 0px 0px 30px 30px;
+  font-family: 'Roboto Slab';
+  color: white;
+  font-size: 2em;
+  background-color: var(--main-color);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#column-logo > h1:hover {
+  padding: 10% 8% 8% 8%;
+}
+
+#column-nav ul {
+  padding: 4%;
+  font-family: Overpass;
+}
+
+#column-nav li {
+  color: #0E4767;
+  font-weight: 700;
+  padding-left: 11%;
+  display: inline;
+  font-size: 1.1em;
+  transition: 0.5s ease;
+}
+
+#column-nav li:hover {
+  text-decoration: underline;
+}
+
+
+#homepage-content {
+  margin: 8% 15% 13% 15%;
+}
+
+#homepage-content h1 {
+  font-family: Roboto Slab;
+  padding-bottom: 2%;
+  font-size: 2.5em;
+  color: var(--main-text-color);
+}
+
+#homepage-content h2 {
+  font-family: Overpass;
+  padding-bottom: 5%;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: var(--main-text-color);
+}
+
+
+/* LEKTIONSGRID START */
+.grid-container {
+  margin: 0% 6% 0% 6%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 4em;
+}
+
+.grid-item {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: 50%;
+  height: 25em;
+  width: 18em;
+}
+
+.lektion-top {
+  background-color: white /*var(--main-bg-color)*/;
+  border-radius: 30px 30px 0px 0px;
+  border: solid lightgrey 3px;
+  border-bottom: 0px;
+}
+
+.lektion-bottom {
+  background-color: #E8E8E8;
+  border-bottom: solid var(--accent-color) 7px;
+}
+
+.lektion-bottom h3, h4, p {
+  padding: 3% 7% 0% 7%;
+  color: var(--main-text-color);
+}
+
+.lektion-bottom h3 {
+  font-size: 1.8em;
+  font-family: Roboto Slab;
+}
+
+.lektion-bottom h4 {
+  font-size: 1.3em;
+  font-family: Overpass;
+  font-weight: 700;
+}
+
+.lektion-bottom p {
+  font-size: 1.1em;
+  font-family: Overpass;
+  font-weight: 400;
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--main-color);
+}
+
+#footer-navbar-row {
+  display: flex;
+  margin: 0% 12% 0% 12%;
+}
+
+
+#footer-nav ul {
+  padding: 4%;
+  font-family: Overpass;
+
+}
+
+
+#footer-nav li {
+  padding: 5%;
+  color: white;
+  text-decoration: underline;
+  display: inline;
+  font-size: 1.1em;
+}
+
+
+#sthlm-logo{
+  width: 60%;
+  height: 60%;
+  padding: 5%
+}
+
+
+#column-sthlm-logo {
+  flex: 10%;
+}
+
+#footer-nav {
+  flex: 60%;
+  text-align: left;
+}
