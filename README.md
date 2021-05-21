@@ -1,1 +1,5 @@
 # internetskolan
+
+---
+permalink: /index.html
+---
