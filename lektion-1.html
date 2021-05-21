@@ -3,6 +3,8 @@
   <head>
     <link rel="stylesheet" href="style.css"><meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+
     <title>Internetskolan</title>
   </head>
 
@@ -39,45 +41,88 @@
 <!-- MAIN PAGE CONTENT -->
 <main class="lektion-content">
 
-<section class="hero-container">
-<div id="link-tree">
-  <ul>
-    <li><a href="/" id="tillbaka">Tillbaka</a></li>
-    <li><a href="/">Startsida</a></li>
-    <li><h5>Lektion 1</h5></li>
-  </ul>
-</div>
+  <section class="hero-container">
+  <div id="link-tree">
+    <ul>
+      <li><a href="/" id="tillbaka"><i class="fas fa-angle-double-left"></i>Tillbaka</a></li>
+      <li><div class="line"></div></li>
+      <li><a href="/">Startsida<i class="fas fa-angle-double-right"></i></a></li>
+      <li><h5>Lektion 1</h5></li>
+    </ul>
+  </div>
 
   <div class="lektion-info-container">
     <h3>Lektion 1</h3>
     <h1>Hur fungerar internet egentligen?</h1>
     <h2>I den här lektionen får du lära dig:
-      <a name="chapter4">Vad internet är</a>
+      <a href="#lektion-del-1" name="punkt-1">Vad internet är</a>
       <a name="chapter4">Vem som uppfann internet</a>
       <a name="chapter4">Hur internet fungerar</a>
     </h2>
   </div>
-  <img class="lektion-img" src="bananas.png">
+  <img class="lektion-img" src="/lektion_1.png">
 
 </section>
 
+<!-- LEKTIONSINNEHÅLL START -->
 <section class="lektion-content-container">
-  lektion-content-container
   
+<!-- Textruta  -->
   <div class="lektion-textbox">
-    Lorem ipsum
-  </div>
-  
+  <a class="lektion-del" id="lektion-del-1"><h3>Vad är internet?</a> <i class="fas fa-volume-up"></i></h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+
+<!-- Bild med bakgrundsremsa -->
   <div class="img-container-remsa">
-    img-container-remsa
+
     <div class="img-container-img">
-      img-container-img
+      <img class="lektionsbild" src="lektion_2.png" alt="lektion_1.png">
     </div>
+
+  </div>
+
+<!-- Textruta  -->
+  <div class="lektion-textbox">
+    <h3>Vad är internet? <i class="fas fa-volume-up"></i></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
   </div>
   
+<!-- Bild utan bakgrundsremsa -->
+<div class="img-container">
+
+  <div class="img-container-img">
+    <img class="lektionsbild" src="lektion_4.png" alt="lektion_1.png">
+  </div>
+
+</div>
+
+<!-- Textruta  -->
+<div class="lektion-textbox">
+  <strong>Notera!</strong>
+  <h3>Vad är internet? <i class="fas fa-volume-up"></i></h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+
+<!-- Bild med bakgrundsremsa -->
+<div class="img-container-remsa">
+
+  <div class="img-container-img">
+    <img class="lektionsbild" src="lektion_1.png" alt="lektion_1.png">
+  </div>
+
+</div>
+<!-- Textruta  -->
+<div class="lektion-textbox">
+  <h3>Vad är internet? <i class="fas fa-volume-up"></i></h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+  
+
+<!-- LEKTIONSINNEHÅLL SLUT -->
 </section>
 
-
+<!-- SLUT LEKTIONSCONTAINER -->
 </main>
 
 <!-- FOOTER -->

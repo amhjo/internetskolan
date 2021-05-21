@@ -28,8 +28,35 @@
   height: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--main-bg-color);
+
+}
+
+/* vågen i toppen */
+.custom-shape-divider-top-1621601788 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1621601788 svg {
+  position: relative;
+  display: block;
+  width: calc(116% + 1.3px);
+  height: 32px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1621601788 .shape-fill {
+  fill: #0E4767;
 }
 
 #logo-navbar-row {
@@ -37,7 +64,7 @@ body {
 }
 
 header {
-    margin: 0% 11% 0% 11%;
+    margin: 0% 13% 0% 13%;
 }
 
 #column-logo {
@@ -99,12 +126,13 @@ header {
 }
 
 #navbar-accessability i {
-  padding-right: 1%;
+  padding-right: 0.5%;
 }
 
 #navbar-accessability li {
   color: rgb(95, 95, 95);
   cursor: pointer;
+  font-size: 0.95em;
   transition: 0.1s ease;
 }
 
@@ -128,7 +156,7 @@ header {
   font-family: Roboto Slab;
   margin: -2% 0 -2% 0;
   padding: 2%;
-  font-size: 2.3em;
+  font-size: 2em;
   color: var(--main-text-color);
 }
 
@@ -138,7 +166,7 @@ header {
   padding-bottom: 5%;
   line-height: 1.5em;
   padding: 1.5% 0% 8% 2%;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: var(--main-text-color);
 }
 
@@ -202,8 +230,6 @@ header {
 .lektion-top {
   background-color: white;
   border-radius: 30px 30px 0px 0px;
-  /* border: solid lightgrey 3px;
-  border-bottom: 0px; */
 }
 
 .lektion-bottom {
@@ -212,7 +238,7 @@ header {
   z-index: -5;
 }
 
-.lektion-bottom h3, h4, p {
+.lektion-bottom h3, .lektion-bottom h4, .lektion-bottom p {
   padding: 5% 7% 0% 7%;
   color: var(--main-text-color);
 }
@@ -243,10 +269,10 @@ header {
 #column-information-row {
   display: flex;
   color: var(--main-text-color);
-  padding: 3.5% 2% 2% 2%;
+  padding: 3.5% 2% 10% 2%;
   font-family: 'Overpass';
   font-weight: 300;
-  font-size: 1.15em;
+  font-size: 1em;
 }
 
 #column-help, #column-info {
@@ -268,22 +294,53 @@ header {
 footer {
   background-color: var(--main-color);
   min-height: 4em;
+  
    
 }
 
-#footer-swirl-svg {
+/* #footer-swirl-svg {
 background-image: url("footer-wave.svg");
 height: 10em;
 background-repeat: no-repeat;
 width: 100%;
 transform: translateY(-40%);
-margin-bottom: -6%;
+margin-bottom: -8%;
+z-index: 1;
+position: relative;
+overflow: hidden;
+} 
+*/
+
+
+/* ----- Vågen i botten ---- */
+.custom-shape-divider-top-1621603329 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
 }
+
+.custom-shape-divider-top-1621603329 svg {
+  position: relative;
+  display: block;
+  width: calc(147% + 1.3px);
+  height: 66px;
+}
+
+.custom-shape-divider-top-1621603329 .shape-fill {
+  fill: #218CC8;
+}
+
 
 #footer-navbar-row {
   display: flex;
   padding-top: 1%;
   margin: -5% 12% 0 12%;
+  z-index: 100;
+  position: relative;
 }
 
 
@@ -329,14 +386,11 @@ footer a:hover {
   border-bottom: 3px var(--accent-color) solid;
 }
 
-#red {
-  color: red;
-}
-
 /* LEKTION CSS */
 
 .lektion-content {
-  margin: 7% 18% 7% 18%;
+  margin: 7% 23% 7% 23%;
+  filter: drop-shadow(0px 0px 8px #312b4538);
 }
 
 .hero-container {
@@ -344,6 +398,11 @@ footer a:hover {
   border-radius: 70px 70px 0px 0px;
   display: flex;
   flex-direction: column;
+}
+
+#link-tree {
+  padding-top: 2em;
+  padding-left: 1em;
 }
 
 #link-tree li, a {
@@ -369,8 +428,27 @@ footer a:hover {
 }
 
 .hero-container li a, h5 {
-  padding: 2em;
+  padding:0.7em;
 }
+
+#link-tree h5 {
+margin: -1.1em;
+}
+
+.fa-angle-double-right {
+  padding-left: 0.5em;
+}
+
+.fa-angle-double-left {
+  padding-right: 0.5em;
+}
+
+.line {
+  padding-right: 0.3em;
+  height: 25px;
+  border-left: 2px solid var(--main-color);
+  display: inline;
+  }
 
 .lektion-info-container {
   margin: 5% 10% 0% 10%;
@@ -381,7 +459,7 @@ footer a:hover {
 
 .lektion-info-container a {
   display: block;
-  padding-top: 1.5%;
+  padding-top: 2%;
   font-weight: 700;
   color: var(--accent-color);
   text-decoration: underline;
@@ -391,7 +469,13 @@ footer a:hover {
 .lektion-info-container h1 {
   font-family: Roboto Slab;
   font-size: 2em;
-  padding: 2% 0% 2% 0%;
+  padding: 2% 0% 3% 0%;
+}
+
+.lektion-img {
+  width: 40%;
+  transform: translateY(-35%) translateX(130%);
+  margin-bottom: -18%;
 }
 
 .lektion-info-container h2, .lektion-info-container h3 {
@@ -399,23 +483,59 @@ footer a:hover {
   font-size: 1.3em;
 }
 
-
-img.lektion-img {
-  width: 20%;
-}
-
 .lektion-content-container {
-  background-color: red;
+  background-color: var(--main-bg-color);
+  position: relative;
 }
 
 .lektion-textbox {
-  background-color: blue;
+  padding: 15% 20% 15% 20%;
+  font-family: Overpass;
+  color: var(--main-text-color);
+}
+
+.lektion-textbox i {
+  padding-left: 2%;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.lektion-textbox strong {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding-bottom: 3%;
+  color: var(--accent-color);
 }
 
 .img-container-remsa {
-  background-color: orange;
+  background-color: rgba(33, 140, 200, 0.22);
+  max-height: 10em;
+  z-index: -10;
 }
 
 .img-container-img {
-  background-color: purple;
+  width: 33%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+}
+
+.lektion-textbox h3 {
+  font-family: Overpass;
+  font-weight: 700;
+  font-size: 1.3em;
+  padding-bottom: 2%;
+}
+
+.lektion-del {
+  color: var(--main-text-color);
+  font-size: 1em;
+}
+
+.lektion-textbox p {
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
