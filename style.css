@@ -10,7 +10,7 @@
   /* ACCENTFÄRG: Magenta/rosa/orange */
   --accent-color: #F44559;
 
-  /* ACCENTFÄRG: Magenta/rosa/orange */
+  /* ACCENTFÄRG MÖRK: Magenta/rosa/orange */
   --accent-color-dark: #d3263a;
 
   /* BG-VIT */
@@ -220,6 +220,7 @@ header {
 .lektion-bottom h3 {
   font-size: 1.65em;
   font-family: Roboto Slab;
+  font-weight: 700;
 }
 
 .lektion-bottom h4 {
@@ -266,13 +267,23 @@ header {
 /* --- FOOTER --- */
 footer {
   background-color: var(--main-color);
-  min-height: 5em;
+  min-height: 4em;
+   
+}
+
+#footer-swirl-svg {
+background-image: url("footer-wave.svg");
+height: 10em;
+background-repeat: no-repeat;
+width: 100%;
+transform: translateY(-40%);
+margin-bottom: -6%;
 }
 
 #footer-navbar-row {
   display: flex;
   padding-top: 1%;
-  margin: 0 12% 0 12%;
+  margin: -5% 12% 0 12%;
 }
 
 
@@ -293,7 +304,6 @@ footer {
 #sthlm-logo{
   width: 10em;
   height: auto;  
-  padding: 1em;
 }
 
 
@@ -321,4 +331,91 @@ footer a:hover {
 
 #red {
   color: red;
+}
+
+/* LEKTION CSS */
+
+.lektion-content {
+  margin: 7% 18% 7% 18%;
+}
+
+.hero-container {
+  background: linear-gradient(180.86deg, #FCFCFC 42.13%, #f4f4f4 100%), #FFFFFF;
+  border-radius: 70px 70px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+#link-tree li, a {
+  font-family: 'Overpass';
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--main-color);
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+}
+
+#link-tree a:hover {
+  text-decoration: underline;
+}
+
+#link-tree li h5 {
+  font-family: 'Overpass';
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--accent-color);
+  display: inline;
+}
+
+.hero-container li a, h5 {
+  padding: 2em;
+}
+
+.lektion-info-container {
+  margin: 5% 10% 0% 10%;
+  color: var(--main-text-color);
+  font-family: Overpass;
+  font-weight: 300;
+}
+
+.lektion-info-container a {
+  display: block;
+  padding-top: 1.5%;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-decoration: underline;
+  list-style: none;
+} 
+
+.lektion-info-container h1 {
+  font-family: Roboto Slab;
+  font-size: 2em;
+  padding: 2% 0% 2% 0%;
+}
+
+.lektion-info-container h2, .lektion-info-container h3 {
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+
+img.lektion-img {
+  width: 20%;
+}
+
+.lektion-content-container {
+  background-color: red;
+}
+
+.lektion-textbox {
+  background-color: blue;
+}
+
+.img-container-remsa {
+  background-color: orange;
+}
+
+.img-container-img {
+  background-color: purple;
 }
