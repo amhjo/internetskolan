@@ -34,7 +34,6 @@ html {
 
 body {
   background-color: var(--main-bg-color);
-
 }
 
 /* vågen i toppen */
@@ -51,13 +50,15 @@ body {
   position: relative;
   display: block;
   width: calc(116% + 1.3px);
-  height: 32px;
+  height: 37px;
   transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1621601788 .shape-fill {
   fill: #0E4767;
 }
+
+/* slut på vågen */
 
 #logo-navbar-row {
   display: flex;
@@ -293,34 +294,21 @@ header {
 /* --- FOOTER --- */
 footer {
   background-color: var(--main-color);
-  min-height: 4em;
-  
-   
+  min-height: 10em;
 }
 
-/* #footer-swirl-svg {
-background-image: url("footer-wave.svg");
-height: 10em;
-background-repeat: no-repeat;
-width: 100%;
-transform: translateY(-40%);
-margin-bottom: -8%;
-z-index: 1;
-position: relative;
-overflow: hidden;
-} 
-*/
-
+.footer-svg-container {
+  position: relative;
+}
 
 /* ----- Vågen i botten ---- */
 .custom-shape-divider-top-1621603329 {
   position: absolute;
-  bottom: -100%;
+  bottom: -0.5em;
   left: 0;
+  right: 0;
   width: 100%;
   overflow: hidden;
-  line-height: 0;
-
 }
 
 .custom-shape-divider-top-1621603329 svg {
@@ -333,7 +321,6 @@ overflow: hidden;
 .custom-shape-divider-top-1621603329 .shape-fill {
   fill: #218CC8;
 }
-
 
 #footer-navbar-row {
   display: flex;
@@ -384,24 +371,25 @@ footer a {
 
 footer a:hover {
   border-bottom: 3px var(--accent-color) solid;
+  transition: 0.1s ease;
 }
 
 /* LEKTION CSS */
 
 .lektion-content {
-  margin: 7% 23% 7% 23%;
+  margin: 7% 23% 14% 23%;
   filter: drop-shadow(0px 0px 8px #312b4538);
 }
 
 .hero-container {
-  background: linear-gradient(180.86deg, #FCFCFC 42.13%, #f4f4f4 100%), #FFFFFF;
+  background: #fcfcfc;
   border-radius: 70px 70px 0px 0px;
   display: flex;
   flex-direction: column;
 }
 
 #link-tree {
-  padding-top: 2em;
+  padding-top: 2.5em;
   padding-left: 1em;
 }
 
@@ -417,6 +405,7 @@ footer a:hover {
 
 #link-tree a:hover {
   text-decoration: underline;
+
 }
 
 #link-tree li h5 {
@@ -425,6 +414,7 @@ footer a:hover {
   font-size: 0.9em;
   color: var(--accent-color);
   display: inline;
+  
 }
 
 .hero-container li a, h5 {
@@ -457,6 +447,10 @@ margin: -1.1em;
   font-weight: 300;
 }
 
+.lektion-info-lessonlinks {
+  padding-top: 1.5%;
+}
+
 .lektion-info-container a {
   display: block;
   padding-top: 2%;
@@ -466,26 +460,40 @@ margin: -1.1em;
   list-style: none;
 } 
 
+.lektion-info-container a:hover {
+  color: var(--accent-color-dark);
+} 
+
 .lektion-info-container h1 {
   font-family: Roboto Slab;
-  font-size: 2em;
+  font-size: 2.2em;
   padding: 2% 0% 3% 0%;
 }
 
-.lektion-img {
-  width: 40%;
-  transform: translateY(-35%) translateX(130%);
-  margin-bottom: -18%;
+.lektion-info-img {
+  transform: translateY(-55%) translateX(120%);
+}
+
+.lektion-info-container-remsa {
+  background-color: #d3d3d3;
+  margin-top: 5.5em;
+  margin-bottom: -13em;
 }
 
 .lektion-info-container h2, .lektion-info-container h3 {
   font-weight: 300;
   font-size: 1.3em;
+  max-width: 80%;
 }
 
+
 .lektion-content-container {
-  background-color: var(--main-bg-color);
+  background-color: #fcfcfc;
   position: relative;
+  border-width: 0px 0px 10px 0px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  overflow: hidden;
 }
 
 .lektion-textbox {
@@ -494,13 +502,13 @@ margin: -1.1em;
   color: var(--main-text-color);
 }
 
-.lektion-textbox i {
+.lektion-textbox i, .howto-textbox-column-1 i, .howto-textbox i{
   padding-left: 2%;
   cursor: pointer;
   color: var(--accent-color);
 }
 
-.lektion-textbox strong {
+.lektion-textbox strong, .howto-textbox-column-1 strong, .howto-textbox strong {
   display: block;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -522,7 +530,7 @@ margin: -1.1em;
   z-index: 100;
 }
 
-.lektion-textbox h3 {
+.lektion-textbox h3, .howto-textbox-column-1 h3, .howto-textbox h3 {
   font-family: Overpass;
   font-weight: 700;
   font-size: 1.3em;
@@ -534,8 +542,217 @@ margin: -1.1em;
   font-size: 1em;
 }
 
-.lektion-textbox p {
+.lektion-textbox p, .howto-textbox-column-1 p, .howto-textbox p{
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.5em;
+}
+
+/* --- LEKTION HOW TO --- */
+
+.howto-content-container {
+  background-color: #fcfcfc;
+  position: relative;
+  border-width: 0px 0px 10px 0px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  overflow: hidden;
+}
+
+.blurb-container {
+  padding: 0% 10% 0% 10%;
+}
+
+.howto-column-row {
+  display: flex;
+}
+
+.howto-textbox-column-1, .howto-textbox-column-2 {
+  padding: 10% 5% 10% 5%;
+  font-family: Overpass;
+  color: var(--main-text-color);
+}
+
+.howto-textbox-column-2 {
+  width: 80%;
+  transform: none;
+}
+
+.howto-textbox-column-1 {
+  width: 120%;
+  transform: none;
+}
+
+.howto-textbox-column-2 img {
+  width: 80%;
+}
+
+.howto-info-img-smaller {
+  transform: translateY(-60%) translateX(50%) scale(60%);
+  max-width: 70%;
+}
+
+.howto-lektionsbild {
+  padding-top: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.howto-textbox {
+  padding: 10% 20% 10% 20%;
+  font-family: Overpass;
+  color: var(--main-text-color);
+}
+
+/* --- Individuell styling för How to-bilder --- */
+.howto-lektionsbild#howto-1 {
+  transform: translateY(30%) translateX(70%) scale(250%);
+}
+
+.howto-lektionsbild#howto-2 {
+  transform: translateY(15%) scale(140%);
+  padding-bottom: 20%;
+}
+
+.howto-lektionsbild#howto-3 {
+  transform:  translateX(20%) scale(150%);
+}
+
+
+/*--- Viktig textruta ---*/
+
+.textbox-strong {
+  padding: 8%;
+  margin: 12%;
+  border-radius: 30px 30px 0px 30px;
+  font-family: Overpass;
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+}
+
+.textbox-strong h3 {
+  font-size: 1.5em;
+  padding-bottom: 3%;
+}
+
+.textbox-strong li {
+  padding: 1% 0% 1% 0%;
+  font-size: 1.1em;
+}
+
+/* --- TILLBAKA TILL TOPPEN-KNAPP --- */
+
+.button-container {
+  height: 5em;
+  padding-bottom: 10em;
+  position: relative;
+}
+
+#back-to-top-button {
+  padding: 1em;
+  border: none;
+  outline: none;
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1em;
+  font-family: 'Overpass';
+  font-weight: 700;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.1s ease;
+}
+
+#back-to-top-button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+#back-to-top-button:focus {
+  outline: 3px solid var(--main-text-color);
+}
+
+.fa-angle-double-up {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* TUBEN */
+
+.tuben {
+  padding-top: 10%;
+  text-align: center;
+  font-family: 'Overpass';
+  font-weight: 700;
+  width: 50%;
+  margin: 1em auto;
+}
+
+.tuben p {
+  font-size: 0.9em;
+  margin-bottom: 4.5em;
+  color: var(--main-text-color);
+  font-weight: 500;
+}
+
+.timeline {
+  border-top: 3px solid var(--main-text-color);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.link {
+  position: relative;
+  margin-top: 1em;
+  transition: 0.1s ease;
+}
+
+.link a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.link:first-child {
+  margin-left: -5.5em;
+}
+
+.link:last-child {
+  margin-right: -5.5em;
+}
+
+.link::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: var(--main-color);
+  position: absolute;
+  border-radius: 20px;
+  top: -1.8em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.active::after,
+.link:hover::after {
+  background: var(--accent-color);
+  transition: 0.1s ease;
+}
+
+.link:hover {
+  color: var(--accent-color);
+}
+
+.active {
+  color: var(--accent-color);
 }
