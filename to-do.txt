@@ -1,0 +1,10 @@
+ 
+
+!! Att göra under morgondagen !!
+
+
+1. Finslipa lexikonsidan. Varför hoppar Nahom runt?
+
+2. Lägga in alla illustrationerna :)
+
+3. Göra klart länksidan: vi kör div:ar i grid-items som vi stylear med ID :)
