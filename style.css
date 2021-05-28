@@ -16,6 +16,8 @@
   /* ACCENTFÄRG MÖRK: Magenta/rosa/orange */
   --accent-color-dark: #d3263a;
 
+  --color-grey: rgb(243, 243, 243);
+
   /* BG-VIT */
   --main-bg-color: #f4f4f4;
 
@@ -109,9 +111,9 @@ header {
 
 #navbar-links, #navbar-accessability, #navbar-links li, #navbar-accessability li {
   display: inline;
-  font-family: Overpass;
+  font-family: 'Overpass';
   font-size: 1.05em;
-  padding-left: 5%;
+  padding-left: 4%;
   font-weight: 700;
 }
 
@@ -136,7 +138,7 @@ header {
 #navbar-accessability li {
   color: rgb(95, 95, 95);
   cursor: pointer;
-  font-size: 0.95em;
+  font-size: 0.85em;
   transition: 0.1s ease;
 }
 
@@ -144,7 +146,7 @@ header {
   border-bottom: 3px var(--accent-color) solid;
 }
 
-#accessability-1:hover, #accessability-2:hover {
+#accessability-1:hover, #accessability-2:hover, #accessability-3:hover {
   color: var(--accent-color);
 }
 
@@ -160,7 +162,7 @@ header {
   font-family: Roboto Slab;
   margin: -2% 0 -2% 0;
   padding: 2%;
-  font-size: 2em;
+  font-size: 2.2em;
   color: var(--main-text-color);
 }
 
@@ -185,6 +187,10 @@ header {
   margin: 2% 0% 3% 0%;
 }
 
+.grid-container .fa-arrow-right {
+  padding-left: 0em;
+  padding-right: 0.5em;
+}
 .grid-item {
   display: grid;
   grid-auto-rows: 50%;
@@ -423,7 +429,7 @@ footer a:hover {
   
 }
 
-.hero-container li a, h5, .hero-column-row li a, h5 {
+.hero-container li a, h5, .hero-column-row li a, h5, .subpage-column-row li a, h5 {
   padding:0.7em;
 }
 
@@ -454,12 +460,23 @@ margin: -1.1em;
   font-weight: 300;
 }
 
+.link-wrapper {
+  color: var(--main-text-color);
+  font-family: Overpass;
+  font-weight: 300;
+  padding-bottom: 10%;
+}
+
+.link-wrapper h1 {
+  font-size: 2em;
+}
+
 .lektion-info-lessonlinks .fa-arrow-right {
   padding-right: 1em;
   padding-left: 0;
 }
 
-.hero-column-row {
+.hero-column-row, .subpage-column-row {
   display: flex;
 }
 
@@ -467,9 +484,84 @@ margin: -1.1em;
   flex: 50%;
 }
 
+.subpage-column-row {
+  max-width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .hero-column-item img {
   width: 100%;
 }
+
+/* Items för länkar på länksidan */
+.subpage-column-item {
+  flex: 10%;
+  flex-direction: column;
+  max-width: 13em;
+  margin: 3% 5% 0% 0%;
+  height: 13em;
+  background-color: red;
+  border-radius: 40px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 8px #312b4538);
+  }
+
+
+.subpage-column-item:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 10px #312b4557);
+}
+
+/* Styling för varje item */
+.subpage-column-item.itemOne {
+  background-color: blue;
+}
+
+.subpage-column-item.itemTwo {
+  background-color: green;
+}
+
+.subpage-column-item.itemThree {
+  background-color: yellow;
+}
+
+.subpage-column-item.itemFour {
+  background-color: red;
+}
+
+.link-top {
+  height: 40%;
+  padding: 5%;
+  background-color: #fff;
+}
+
+.subpage-column-item img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.link-bottom {
+  height: 50%;
+  width: 100%;
+  padding: 6%;
+  background-color: var(--color-grey);
+  color: var(--main-text-color);
+}
+
+.subpage-column-row .link-bottom h3 {
+  font-size: 1.3em;
+  font-family: 'Roboto Slab';
+}
+
+.subpage-column-row .link-bottom h4 {
+  font-size: 1em;
+}
+
 
 /* Gridcontainer för undersidor med grid */
 .grid-container-subpage {
@@ -479,19 +571,18 @@ margin: -1.1em;
   border-style: solid;
   border-color: var(--accent-color);
   overflow: hidden;
-  padding-top: 5%;
-  
+  padding: 12%;
 }
 
 /* Grid för subpages */
 .grid-four-column {
   position: relative;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  row-gap: 2em;
-  padding: 5%;
+  row-gap: 7em;
+  column-gap: 4em;
 }
 
 /* Griditem för subpages */
@@ -506,7 +597,7 @@ margin: -1.1em;
 }
 
 .grid-four-column-item {
-  padding: 3em;
+  padding: 10%;
   height: 100%;
   width: 100%;
   grid-auto-rows: 60%;
@@ -550,7 +641,7 @@ margin: -1.1em;
   padding-top: 1.5%;
 }
 
-.lektion-info-container a, .hero-column-row a {
+.lektion-info-container a, .hero-column-row a, .subpage-column-row a {
   display: block;
   padding-top: 2%;
   font-weight: 700;
@@ -559,11 +650,11 @@ margin: -1.1em;
   list-style: none;
 } 
 
-.lektion-info-container a:hover, .hero-column-row a:hover {
+.lektion-info-container a:hover, .hero-column-row a:hover, .subpage-column-row a:hover {
   color: var(--accent-color-dark);
 } 
 
-.lektion-info-container h1, .hero-column-row h1 {
+.lektion-info-container h1, .hero-column-row h1, .subpage-column-row h1 {
   font-family: Roboto Slab;
   font-size: 2.2em;
   padding: 2% 0% 3% 0%;
@@ -603,7 +694,7 @@ margin: -1.1em;
   text-transform: uppercase;
 }
 
-.hero-column-row h4 {
+.hero-column-row h4, .subpage-column-row h4 {
   font-weight: 400;
   padding-top: 2%;
   font-size: 1.3em;
