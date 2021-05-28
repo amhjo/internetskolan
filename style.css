@@ -5,24 +5,24 @@
 /* --- Sätter variabler för färger --- */
 :root {
   /* HUVUDFÄRG: PostNord-blå */
-  --main-color: #218CC8;
+  --main-color: #6357EB;
 
   /* ACCENTFFÄRG: Mörk huvudfärg */
-  --main-color-dark: #0E4767;
+  --main-color-dark: #27258B;
 
   /* ACCENTFÄRG: Magenta/rosa/orange */
-  --accent-color: #F44559;
+  --accent-color: #E8436A;
 
   /* ACCENTFÄRG MÖRK: Magenta/rosa/orange */
-  --accent-color-dark: #d3263a;
+  --accent-color-dark: #961249;
 
-  --color-grey: rgb(243, 243, 243);
+  --color-grey: rgb(248, 248, 248);
 
   /* BG-VIT */
   --main-bg-color: #f4f4f4;
 
   /* TEXTFÄRG: Nästan svart version av PostNord-blå */
-  --main-text-color: #312B45;
+  --main-text-color: #352D52;
 }
 
 
@@ -60,7 +60,7 @@ body {
 }
 
 .custom-shape-divider-top-1621601788 .shape-fill {
-  fill: #0E4767;
+  fill: var(--main-color-dark);
 }
 
 /* slut på vågen */
@@ -113,12 +113,12 @@ header {
   display: inline;
   font-family: 'Overpass';
   font-size: 1.05em;
-  padding-left: 4%;
+  padding-left: 3.6%;
   font-weight: 700;
 }
 
 #navbar-links a {
-  color: #0E4767;
+  color: var(--main-text-color);
   text-decoration: none;
   transition: 0.1s ease;
 }
@@ -155,7 +155,6 @@ header {
 
 #homepage-content {
   margin: 7% 15% 7% 15%;
-
 }
 
 #homepage-content h1 {
@@ -168,12 +167,26 @@ header {
 
 #homepage-content h2 {
   font-family: Overpass;
-  font-weight: 300;
+  font-weight: 500;
   padding-bottom: 5%;
   line-height: 1.5em;
-  padding: 1.5% 0% 8% 2%;
-  font-size: 1.2em;
+  padding: 2%;
+  font-size: 1.3em;
   color: var(--main-text-color);
+}
+
+.white-con {
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 3%;
+  margin-bottom: 10%;
+  border-radius: 70px 70px 0px 70px;
+  
+  animation: fadeIn 0.7s ease-in;
+  -webkit-animation: fadeIn 0.7s ease-in;
+  -moz-animation: fadeIn 0.7s ease-in;
+  -o-animation: fadeIn 0.7s ease-in;
+  -ms-animation: fadeIn 0.7s ease-in;
 }
 
 
@@ -198,13 +211,13 @@ header {
   width: 18em;
   padding: 1em 2.3em 3em 2.3em;
   transition: 0.3s ease;
-  filter: drop-shadow(0px 0px 8px #312b4538);
+  filter: drop-shadow(0px 0px 7px #1f1b2c49);
 }
 
 .grid-item:hover {
   transform: scale(1.02);
   transition: 0.3s ease;
-  filter: drop-shadow(0px 0px 10px #312b4557);
+  filter: drop-shadow(0px 0px 10px #312b457e);
 }
 
 .grid-container a { 
@@ -217,27 +230,49 @@ header {
   margin-left: auto;
   margin-right: auto;
   width: 83%;
-  transform: translateY(-22%);
 }
+
 /* Individuell transform för varje lektionsbild */
-#fyra, #fem {
+#fyra {
+  -webkit-transform: translateY(-5%) scale(0.9);
+  -moz-transform: translateY(-5%) scale(0.9);
+  -o-transform: translateY(-5%) scale(0.9);
+  transform: translateY(-5%) scale(0.9);
+}
+
+#fem {
+  -webkit-transform: translateY(15%);
+  -moz-transform: translateY(15%);
+  -o-transform: translateY(15%);
   transform: translateY(15%);
 }
 
 #ett {
-  transform: translateY(-14%) scale(121%);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: translateY(-14%) scale(1.24);
 }
 
 #tva {
-  transform: translateY(-14%);
+  -moz-transform: translateY(-6%) scale(1.05);
+  -o-transform: translateY(-6%) scale(1.05);
+  -webkit-transform: translateY(-6%) scale(1.05);
+  transform: translateY(-6%) scale(1.05);
 }
 
 #tre {
-  transform: translateY(-15%);
+  -webkit-transform: translateY(-3%) scale(1.1);
+  -moz-transform: translateY(-3%) scale(1.1);
+  -o-transform: translateY(-3%) scale(1.1);
+  transform: translateY(-3%) scale(1.1);
 }
 
 #sex {
-  transform: translateY(280%);
+  -webkit-transform: translateY(10%) scale(1.3);
+  -moz-transform: translateY(10%) scale(1.3);
+  -o-transform: translateY(10%) scale(1.3);
+  transform: translateY(10%) scale(1.3);
 }
 
 .lektion-top {
@@ -246,7 +281,7 @@ header {
 }
 
 .lektion-bottom {
-  background-color: #E8E8E8;
+  background-color: var(--color-grey);
   border-bottom: solid var(--accent-color) 7px;
   z-index: -5;
 }
@@ -265,9 +300,10 @@ header {
 .lektion-bottom h4 {
   font-size: 1.3em;
   font-family: Overpass;
-  color: var(--accent-color-dark);
+  color: var(--accent-color);
   margin-top: -2%;
-  font-weight: 400;
+  font-weight: 700;
+  text-decoration-line: underline;
 }
 
 .lektion-bottom p {
@@ -293,13 +329,13 @@ header {
 }
 
 #column-help  p, #column-info p  {
-  padding: 0% 10% 0% 0%;
-  margin: -2% 0 0 0;
-  line-height: 1.5em;
+  padding: 0% 10% 2.5% 0%;
+  line-height: 1.45em;
 }
 
 #column-help  h3, #column-info  h3 {
   font-family: 'Roboto Slab';
+  margin-bottom: -1%;
 }
 
 
@@ -331,7 +367,7 @@ footer {
 }
 
 .custom-shape-divider-top-1621603329 .shape-fill {
-  fill: #218CC8;
+  fill: var(--main-color);
 }
 
 #footer-navbar-row {
@@ -408,7 +444,7 @@ footer a:hover {
 #link-tree li, #link-tree a {
   font-family: 'Overpass';
   font-weight: 700;
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: var(--main-color-dark);
   text-decoration: none;
   list-style-type: none;
@@ -423,7 +459,7 @@ footer a:hover {
 #link-tree li h5 {
   font-family: 'Overpass';
   font-weight: 700;
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: var(--accent-color);
   display: inline;
   
@@ -465,6 +501,7 @@ margin: -1.1em;
   font-family: Overpass;
   font-weight: 300;
   padding-bottom: 10%;
+  margin-right: -3em;
 }
 
 .link-wrapper h1 {
@@ -499,13 +536,14 @@ margin: -1.1em;
   flex: 10%;
   flex-direction: column;
   max-width: 13em;
-  margin: 3% 5% 0% 0%;
-  height: 13em;
-  background-color: red;
-  border-radius: 40px;
+  min-width: 13em;
+  margin: 4.5% 4.5% 0% 0%;
+  height: 14em;
+  border-radius: 30px 30px 0px 0px;
   overflow: hidden;
   transition: 0.3s ease;
-  filter: drop-shadow(0px 0px 8px #312b4538);
+  filter: drop-shadow(0px 0px 8px #312b454f);
+  border-bottom: solid var(--accent-color) 5px;
   }
 
 
@@ -513,36 +551,27 @@ margin: -1.1em;
   cursor: pointer;
   transform: scale(1.02);
   transition: 0.3s ease;
-  filter: drop-shadow(0px 0px 10px #312b4557);
-}
-
-/* Styling för varje item */
-.subpage-column-item.itemOne {
-  background-color: blue;
-}
-
-.subpage-column-item.itemTwo {
-  background-color: green;
-}
-
-.subpage-column-item.itemThree {
-  background-color: yellow;
-}
-
-.subpage-column-item.itemFour {
-  background-color: red;
+  filter: drop-shadow(0px 0px 10px #312b4570);
 }
 
 .link-top {
-  height: 40%;
-  padding: 5%;
+  height: 45%;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .subpage-column-item img {
   display: block;
   margin: auto;
-  width: 80%;
+  width: 75%;
+  padding: 2%;
+}
+
+.subpage-column-item.realImage img {
+  display: block;
+  margin: auto;
+  padding: 0;
+  width: 100%;
 }
 
 .link-bottom {
@@ -554,8 +583,10 @@ margin: -1.1em;
 }
 
 .subpage-column-row .link-bottom h3 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-family: 'Roboto Slab';
+  color: var(--accent-color);
+  padding-bottom: 2%;
 }
 
 .subpage-column-row .link-bottom h4 {
@@ -582,7 +613,7 @@ margin: -1.1em;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   row-gap: 7em;
-  column-gap: 4em;
+  column-gap: 3em;
 }
 
 /* Griditem för subpages */
@@ -591,10 +622,6 @@ margin: -1.1em;
   padding:  1em;
 }
 
-.lol {
-  background-color:pink;
-  font-family: 'Overpass';
-}
 
 .grid-four-column-item {
   padding: 10%;
@@ -607,10 +634,10 @@ margin: -1.1em;
 .bokstav {
   display: block;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding-bottom: 1.5em;
   color: var(--accent-color);
-  font-family: 'Overpass';
+  font-family: 'Roboto Slab';
   font-weight: 700;
 }
 
@@ -662,22 +689,23 @@ margin: -1.1em;
 
 .info-img {
   transform: translateY(-10%) translateX(15%);
+
 }
 
 .lektion-info-img {
-  transform: translateY(-55%) translateX(105%);
+  transform: translateY(-65%) translateX(100%) scale(1.25);
   width: 50%;
 }
 
 .info-container-remsa {
   background-color: var(--main-color);
-  height: 13em;
-  margin: 1.5em 0em -10em 0em;
+  height: 14em;
+  margin: 10% 0em -10em 0em;
 }
 
 .lektion-info-container-remsa {
   background-color: var(--accent-color);
-  height: 13em;
+  height: 14em;
   margin: 8em 0em -10em 0em;
 }
 
@@ -699,7 +727,7 @@ margin: -1.1em;
   padding-top: 2%;
   font-size: 1.3em;
   line-height: 1.4em;
-  max-width: 80%;
+  
 }
 
 .lektion-content-container {
@@ -732,7 +760,7 @@ margin: -1.1em;
 }
 
 .img-container-remsa {
-  background-color: rgba(33, 140, 200, 0.22);
+  background-color: rgba(99, 87, 235, 0.25);
   max-height: 10em;
   z-index: -10;
 }
@@ -803,7 +831,7 @@ margin: -1.1em;
 }
 
 .howto-info-img-smaller {
-  transform: translateY(-60%) translateX(50%) scale(60%);
+  transform: translateY(-69%) translateX(76%) scale(53%);
   max-width: 70%;
 }
 
@@ -976,4 +1004,32 @@ margin: -1.1em;
 
 .active {
   color: var(--accent-color);
+}
+
+
+/* Keyframes för animation, låt dessa ligga längst ner i dokumentet */
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
