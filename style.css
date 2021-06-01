@@ -957,15 +957,14 @@ margin: -1.1em;
 }
 
 .learning-lektionsbild#howto-6 {
-  transform: scale(2);
-  padding-top: 3em;
-  padding-bottom: 2em;
+  transform: scale(1.8);
+  padding-top: 6em;
+  padding-bottom: 3em;
 }
 
 .learning-lektionsbild#howto-7 {
-  transform: scale(1.5);
-  padding-top: 4em;
-  padding-bottom: 9em;
+  transform: translateX(10%) scale(1.1);
+  padding-bottom: 4em;
 }
 
 
